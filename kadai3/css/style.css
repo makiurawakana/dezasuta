@@ -47,9 +47,7 @@ img {
 .work2 {
     max-width: 960px;
     background-color: #eeeeee;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    margin: 0 auto;
 }
 
 h1 {
@@ -66,30 +64,23 @@ h1 {
 }
 
 .contents ul li {
-    padding: 10px;
+    margin: 10px;
     background-color: #eeeeee;
 }
 
 h2 {
     color: cadetblue;
     border-left: 10px cadetblue solid;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 p {
     font-size: 16px;
 }
 
-.service1 {
-    background-color: white;
-}
-
-.service2 {
-    background-color: white;
-}
-
-.service3 {
-    background-color: white;
+.service {
+    background-color: #ffffff;
+    padding: 10px;
 }
 
 img {
