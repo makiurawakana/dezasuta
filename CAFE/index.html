@@ -8,16 +8,33 @@
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイトです。">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body>
     <header id="header">
         <div class="header_slider">
-            <div><img src="images/pc_first-100.jpg" alt="店内の様子"></div>
+            <div>
+                <picture>
+                    <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+
+                    <img src="images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
+            </div>
         </div>
         <div class="header_wrap">
             <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
             <nav class="pc_nav">
+                <ul>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
                 <ul>
                     <li><a href="#about">ABOUT US</a></li>
                     <li><a href="#menu">MENU</a></li>
@@ -35,7 +52,8 @@
         <div class="title_wrap">
             <p class="sub_title">Have a happy day From a cup of coffee.</p>
             <p class="main_title">ハッピーに溢れる1日を<br>1杯のコーヒーから。</p>
-            <p class="title_desc">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
+            <p class="title_desc">毎日を丁寧に大切に過ごしたい。<br class="sp_br">だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間と<br
+                    class="sp_br">こだわりのコーヒーを提供したい。
             </p>
         </div>
 
@@ -44,6 +62,7 @@
             <div class="coffee_up"><img src="images/pc_about-100.jpg" alt="コーヒーで乾杯している画像"></div>
             <div class="about_desc">
                 <h2 class="about_title"><img src="images/about_us@2x.png" alt="about"></h2>
+                <div class="coffee_up_sp"><img src="images/about_us@2x-100.jpg" alt="コーヒーで乾杯している画像(sp用)"></div>
                 <p class="about_secondary">私たちが提供する<br>こだわりのコーヒー</p>
                 <p class="about_detail">
                     サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
@@ -132,6 +151,16 @@
         <div class="page_top"><a href="#header"><img src="images/to_top@2x.png" alt="page_top"></a>
         </div>
     </footer>
+
+    <script>
+        $(function () {
+            //ここの中に記述
+            $('.sp_btn, .sp_nav li').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            });
+        });
+    </script>
 </body>
 
 </html>
