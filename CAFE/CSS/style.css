@@ -185,6 +185,20 @@ img {
     text-align: center;
 }
 
+/* スライダー調整 */
+.slick-dots {
+    bottom: 20px;
+}
+
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+
+.slick-dotted.slick-slider {
+    margin: 0px;
+}
+
 /* メイン */
 .main {
     background-color: #e8d9bf;
@@ -316,10 +330,70 @@ img {
     width: 245px;
 }
 
-.gallery_list ul {
+.gallery_list {
     display: flex;
     margin-top: 27px;
     justify-content: space-between;
+}
+
+/* スライダー */
+.slick-next::before,
+.slick-prev::before {
+    position: absolute;
+    z-index: 99;
+    content: "";
+    width: 26px;
+    height: 26px;
+    border-top: 5px solid;
+    border-right: 5px solid;
+    top: 50%;
+}
+
+.slick-next {
+    right: 22%;
+}
+
+.slick-prev {
+    z-index: 99;
+    left: 22%;
+}
+
+.slick-next.slick-arrow::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.slick-prev.slick-arrow::before {
+    left: 22%;
+    transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+@media screen and (max-width:767px) {
+
+    .slick-next::before,
+    .slick-prev::before {
+        width: 20px;
+        height: 20px;
+        border-top: 2px solid;
+        border-right: 2px solid;
+    }
+
+    .slick-next {
+        right: 5%;
+    }
+
+    .slick-prev {
+        z-index: 99;
+        left: 5%;
+    }
+
+    .gallery_list img {
+        width: 100%;
+    }
+}
+
+/* モーダルウインドウ */
+.lb-number {
+    display: none !important
 }
 
 /* event */
@@ -531,7 +605,7 @@ time {
     }
 
     .menu_content p {
-        margin: 20px 0px 70px 0px;
+        margin: 20px 0px 50px 0px;
         font-size: 17px;
         line-height: 1.58;
     }

@@ -7,8 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイトです。">
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <!-- lightbox css-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css">
+    <!-- style.css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!--slick プラグイン  -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- モーダルウインドウプラグイン lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+
 </head>
 
 <body>
@@ -17,11 +32,17 @@
             <div>
                 <picture>
                     <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
-
                     <img src="images/pc_first-100.jpg" alt="店内の様子">
                 </picture>
             </div>
+            <div>
+                <picture>
+                    <source srcset="images/sp_main_vs_2@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/slider_2.jpg" alt="店内の様子">
+                </picture>
+            </div>
         </div>
+
         <div class="header_wrap">
             <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
             <nav class="pc_nav">
@@ -96,13 +117,18 @@
         <section id="gallery" class="gallery_wrap">
             <h2 class="gallery_title"><img src="images/gallery@2x.png" alt="gallery"></h2>
             <div class="gallery_list">
-                <ul>
-                    <li><img src="images/pc_gallary_05-100.jpg" alt="ラテアートの写真"></li>
-                    <li><img src="images/pc_gallary_04-100.jpg" alt="レジ周りの写真"></li>
-                    <li><img src="images/pc_gallary_03-100.jpg" alt="ゆったりスペースの写真"></li>
-                    <li><img src="images/pc_gallary_02-100.jpg" alt="コーヒー豆の写真"></li>
-                    <li><img src="images/pc_gallary_01-100.jpg" alt="座席周りの写真"></li>
-                </ul>
+                <div><a href="images/pc_gallary_05-100.jpg" data-lightbox="img-group" data-title="座席周り１"><img
+                            src="images/pc_gallary_05-100.jpg" alt="座席周りの写真１"></a></div>
+                <div><a href="images/pc_gallary_04-100.jpg" data-lightbox="img-group" data-title="コーヒー豆"><img
+                            src="images/pc_gallary_04-100.jpg" alt="コーヒー豆の写真"></a></div>
+                <div><a href="images/pc_gallary_03-100.jpg" data-lightbox="img-group" data-title="座席周り２"><img
+                            src="images/pc_gallary_03-100.jpg" alt="座席周りの写真２"></a></div>
+                <div><a href="images/pc_gallary_02-100.jpg" data-lightbox="img-group" data-title="レジ周り"><img
+                            src="images/pc_gallary_02-100.jpg" alt="レジ周りの写真"></a></div>
+                <div><a href="images/pc_gallary_01-100.jpg" data-lightbox="img-group" data-title="ラテアート"><img
+                            src="images/pc_gallary_01-100.jpg" alt="ラテアートの写真"></a></div>
+                <div><a href="images/pc_gallary_01-100.jpg" data-lightbox="img-group" data-title="ラテアート"><img
+                            src="images/pc_gallary_01-100.jpg" alt="ラテアートの写真"></a></div>
             </div>
         </section>
 
@@ -158,6 +184,28 @@
             $('.sp_btn, .sp_nav li').on('click', function () {
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
+            });
+
+
+            $('.header_slider').slick({
+                autoplaySpeed: 2000,
+                autoplay: true,
+                dots: true,
+                arrows: false,
+            });
+
+
+            $('.gallery_list').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+
+                responsive: [{
+                    breakpoint: 787,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }]
             });
         });
     </script>
