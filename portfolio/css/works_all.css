@@ -1,0 +1,23 @@
+.header_title_wrap {
+    position: relative;
+}
+
+.works_index {
+    max-width: 1000px;
+    margin: 180px auto;
+}
+
+.works_index ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.works_index ul li {
+    width: 300px;
+}
+
+h3 {
+    font-weight: normal;
+    padding: 16px 12px 133px 12px;
+}

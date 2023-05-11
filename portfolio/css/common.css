@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #603813;
+    font-family: "fot-tsukuardgothic-std", "ヒラギノ丸ゴ Pro W4",
+        "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
+        "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
+    font-feature-settings: "palt";
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: rgba(255, 250, 243, 0.8);
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* ここから */
+/* ヘッダー */
+.pc_header_left {
+    width: 745px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header_left {
+    width: 745px;
+}
+
+.pc_header_right {
+    width: 816px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.works_header {
+    width: 172px;
+}
+
+.header_title {
+    position: absolute;
+    top: 175px;
+    left: 175px;
+
+}
+
+.pc_nav {
+    position: absolute;
+    top: 0;
+    right: 200px;
+}
+
+.pc_nav ul {
+    display: flex;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.pc_nav ul li {
+    padding-left: 40px;
+}
+
+/* フッター */
+#footer {
+    height: 200px;
+    background-color: rgba(237, 201, 185, 1.0);
+}
+
+.footer_wrap {
+    margin: 0 auto;
+}
+
+.footer_nav ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 65px;
+    padding-bottom: 40px;
+}
+
+.footer_nav ul li {
+    padding-left: 40px;
+}
+
+.copyright {
+    font-size: 12px;
+    text-align: center;
+}
