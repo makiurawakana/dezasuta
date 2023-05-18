@@ -1,0 +1,166 @@
+.about_wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 650px;
+    max-width: 1000px;
+    margin: 100px auto 0px auto;
+}
+
+.silhouette img {
+    width: 100%;
+    max-width: 220px;
+}
+
+.name_bold {
+    font-size: 35px;
+}
+
+.about_desc p {
+    line-height: 2.11;
+    max-width: 500px;
+    margin-left: 80px;
+}
+
+.circle04 {
+    height: 440px;
+    width: 440px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 99rem;
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* わたしのつよみ */
+.strength {
+    font-size: 42px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* 01 */
+.circle {
+    width: 650px;
+    height: 650px;
+    border-radius: 99rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: -200px;
+    z-index: 1;
+}
+
+.index_figure {
+    font-size: 115px;
+    margin-bottom: 40px;
+    color: #edc9b9;
+}
+
+h3 {
+    writing-mode: vertical-rl;
+    font-feature-settings: normal;
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: 0.24em;
+    line-height: 1.56;
+    margin: 0px auto;
+}
+
+.strength_contents p {
+    z-index: 2;
+    line-height: 2.5;
+    max-width: 480px;
+    margin-left: 40px;
+}
+
+.strength_wrap01 {
+    position: relative;
+    height: 650px;
+}
+
+.strength_contents {
+    display: flex;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin: auto 13%;
+    align-items: center;
+}
+
+.strength_contents h3 {
+    margin: 0 auto;
+}
+
+
+
+/* 02 */
+.strength_wrap02 {
+    position: relative;
+    height: 650px;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.circle02 {
+    width: 650px;
+    height: 650px;
+    border-radius: 99rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    right: -200px;
+    z-index: 1;
+}
+
+.strength_contents02 {
+    display: flex;
+    flex-direction: row-reverse;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin: auto 13%;
+    align-items: center;
+}
+
+.strength_contents02 p {
+    line-height: 2.5;
+    max-width: 480px;
+    margin-right: 40px;
+}
+
+.index_figure02 {
+    font-size: 115px;
+    margin-bottom: 30px;
+    text-align: end;
+    color: #edc9b9;
+}
+
+/* 03 */
+.strength_wrap03 {
+    position: relative;
+    height: 650px;
+    margin-bottom: 90px;
+}
+
+.strength_contents03 {
+    display: flex;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin: auto 13%;
+    align-items: center;
+}
+
+.strength_contents03 p {
+    line-height: 2.5;
+    max-width: 480px;
+    margin-left: 40px;
+}

@@ -1,14 +1,13 @@
 @charset "utf-8";
 
-/* ここからサイト構築 */
-
 /* ヘッダー */
-.header_wrap {
+.header_wrap_top {
     padding: 72px 10%;
     background-color: rgba(242, 232, 219, 0.4);
+    position: relative;
 }
 
-.pc_nav ul {
+.pc_nav_top ul {
     display: flex;
     justify-content: space-between;
     max-width: 440px;
@@ -21,22 +20,24 @@
 }
 
 /* メインビジュアル */
-.hands_img {
-    width: 40%;
-    max-width: 350px;
-    margin-right: 10%;
-    margin-bottom: 40px;
+.mv_wrap {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: rgba(242, 232, 219, 0.4);
+    z-index: 2;
 }
 
-.mv_wrap {
-    width: 100%;
-    background-color: rgba(242, 232, 219, 0.4);
-    display: flex;
-    justify-content: center;
+.hands_img {
+    max-width: 350px;
+    position: absolute;
+    top: 50px;
+    left: 15%;
+    transform: translateY(-50%, -50%);
 }
+
 
 .mv_copy {
-    font-size: 50px;
     font-weight: bold;
     line-height: 1.7;
     letter-spacing: 0.2em;
@@ -44,27 +45,49 @@
     z-index: 2;
 }
 
+.mv_copy .large {
+    font-size: 80px;
+}
+
+.mv_copy .midium {
+    font-size: 50px;
+}
+
+.mv_copy .small {
+    font-size: 32px;
+}
+
+
 .mv_circle {
     position: absolute;
     max-width: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
 }
 
 .copy_wrap {
-    position: relative;
+    position: absolute;
+    top: 140px;
+    left: 68%;
+    transform: translate(-50%, -50%);
 }
 
-.mv_wrap span {
-    font-size: 80px;
+/* スクロール */
+.scroll_wrap {
+    position: relative;
+    height: 108px;
+    margin-top: -64px;
 }
 
 .scroll_dots {
+    position: absolute;
+    top: 0;
+    left: 68%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: translateX(-50%);
 }
 
 .scroll_dots span {
@@ -78,6 +101,7 @@
 
 /* concept */
 .concept {
+    position: relative;
     margin-top: 80px;
     margin-bottom: 124px;
     display: flex;
@@ -88,7 +112,10 @@
     height: 85px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 227px;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    transform: translateX(-50%);
 }
 
 .circle02 {
@@ -96,6 +123,10 @@
     height: 165px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    transform: translateX(-50%);
+    top: 320px;
+    left: 10%;
 }
 
 .concept_lead_wrap {
@@ -104,8 +135,9 @@
     height: 560px;
     border-radius: 99em;
     background-color: rgba(255, 255, 255, 0.8);
-    margin-right: 10%;
-    margin-left: auto;
+    left: 68%;
+    transform: translateX(-50%);
+    font-weight: normal;
 }
 
 .concept_lead {
@@ -121,8 +153,12 @@
 }
 
 /* スキル */
-.skills {
+.skills_main {
     margin: 0 auto;
+    background-color: rgba(242, 232, 219, 0.4);
+}
+
+.skills_title {
     background-color: rgba(242, 232, 219, 0.4);
 }
 
@@ -137,31 +173,52 @@
 }
 
 /* デザイン */
-.slills {
+.skills_contents {
+    display: flex;
     max-width: 1000px;
-    background-color: rgba(242, 232, 219, 0.4);
+    margin: 0 auto;
 }
 
-.skills_design {
-    width: 45%;
-    margin: 24px 10%;
+.skills_design,
+.skills_cording {
+    width: 50%;
+    padding: 24px 10%;
 }
 
-.design_icon {
-    width: 300px;
+.skills_icon {
+    width: 60%;
+    padding: 0 10%;
     margin: 0 auto;
 }
 
 .skills_contents h3 {
-    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
     font-weight: normal;
     line-height: 1.3;
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    margin: 40px 22px;
 }
 
-.skills_design ul {
+h3::before,
+h3::after {
+    content: "";
+    width: 20%;
+    border-top: 3px solid #edc9b9;
+}
+
+h3::before {
+    margin-right: 4%;
+}
+
+h3::after {
+    margin-left: 4%;
+}
+
+
+
+#skills ul {
     display: flex;
     justify-content: center;
 }
@@ -171,46 +228,297 @@
     margin: 35px 10px;
 }
 
+.skills_cording ul li {
+    width: 64px;
+    margin: 35px 10px;
+}
+
 .skills p {
     font-size: 16px;
     line-height: 2.18;
     letter-spacing: 0.04em;
 }
 
+.skills_wave {
+    width: 100%;
+}
+
 /* works */
 .works {
     position: relative;
     display: flex;
+    justify-content: space-between;
     overflow: hidden;
+    margin-bottom: 88px;
 }
 
-.works_wheels {
-    position: absolute;
-    left: -10%;
-    width: 1200px;
-    height: 1200px;
-    border-radius: 99rem;
-    background-color: rgba(255, 255, 255, 0.8);
+.works_title {
+    text-align: center;
 }
+
+/* worksタイトル */
 
 .works h2 {
     width: 173px;
+    margin: 0 auto;
 }
 
 .works h3 {
     font-size: 20px;
+    margin-bottom: 40px;
 }
 
+/* ボタン */
 .btn {
     width: 200px;
-    box-sizing: border-box;
-    text-align: center;
+    height: 64px;
     background: #edc9b9;
-    padding: 24px 58px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     border-radius: 99rem;
     transition: 0.5s;
     letter-spacing: 0.025em;
+    position: relative;
 }
+
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -30px;
+    height: 1px;
+    width: 80px;
+    background-color: #603813;
+
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    transform-origin: right bottom;
+    width: 20px;
+    height: 1px;
+    top: 40px;
+    right: -30px;
+    background-color: #603813;
+    transform: rotate(45deg);
+}
+
+
+.works_animation_wrap {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 背景円 */
+.works_circle_large {
+    width: 100vh;
+    height: 100vh;
+    border-radius: 99rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    padding: 30%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.works_circle_middle {
+    width: 100%;
+    height: 100%;
+    border-radius: 99rem;
+    background-color: rgba(255, 250, 243, 0.8);
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+}
+
+
+/* worksアニメーション*/
+.rotate {
+    /* アニメーション位置調整 */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+
+.rotate .rotate-ctn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: 120.0s linear big-circle infinite;
+    /* 大枠を回転させているアニメーション */
+}
+
+.rotate .box .parts {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* keyframesは下に記述 */
+.rotate {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.rotate .box {
+    position: absolute;
+    width: 100px;
+    height: 50%;
+    transform-origin: 50% 100%;
+}
+
+/* 各コンテンツの文字を上向きにする */
+.rotate .box.box-1 {
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.rotate .box.box-2 {
+    left: 50%;
+    transform: translate(-50%, 0) rotate(60deg);
+}
+
+.rotate .box.box-3 {
+    left: 50%;
+    transform: translate(-50%, 0) rotate(120deg);
+}
+
+.rotate .box.box-4 {
+    left: 50%;
+    transform: translate(-50%, 0) rotate(180deg);
+}
+
+.rotate .box.box-5 {
+    left: 50%;
+    transform: translate(-50%, 0) rotate(240deg);
+}
+
+.rotate .box.box-6 {
+    left: 50%;
+    transform: translate(-50%, 0) rotate(300deg);
+}
+
+
+
+/* 各コンテンツを回転させるアニメーション */
+.rotate .box.box-1 .parts {
+    animation: 120.0s linear circle1 infinite;
+}
+
+.rotate .box.box-2 .parts {
+    animation: 120.0s linear circle2 infinite;
+}
+
+.rotate .box.box-3 .parts {
+    animation: 120.0s linear circle3 infinite;
+}
+
+.rotate .box.box-4 .parts {
+    animation: 120.0s linear circle4 infinite;
+}
+
+.rotate .box.box-5 .parts {
+    animation: 120.0s linear circle5 infinite;
+}
+
+.rotate .box.box-6 .parts {
+    animation: 120.0s linear circle6 infinite;
+}
+
+/* keyframes */
+@keyframes big-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circle1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes circle2 {
+    0% {
+        transform: rotate(300deg);
+    }
+
+    100% {
+        transform: rotate(-60deg);
+    }
+}
+
+@keyframes circle3 {
+    0% {
+        transform: rotate(240deg);
+    }
+
+    100% {
+        transform: rotate(-120deg);
+    }
+}
+
+@keyframes circle4 {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes circle5 {
+    0% {
+        transform: rotate(120deg);
+    }
+
+    100% {
+        transform: rotate(-240deg);
+    }
+}
+
+@keyframes circle6 {
+    0% {
+        transform: rotate(60deg);
+    }
+
+    100% {
+        transform: rotate(-300deg);
+    }
+}
+
+/* ここまで */
+
 
 /* about */
 .about {
@@ -219,26 +527,27 @@
 
 
 .about_bg {
-    position: relative;
     width: 660px;
     height: 660px;
     background-color: rgba(242, 232, 219, 0.4);
     border-radius: 50%;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 10%;
     margin-left: auto;
+    margin-bottom: 120px;
 }
 
 .about_contents {
     position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translateY(-50%);
     z-index: 2;
 }
 
 .about_details {
     display: flex;
+    padding-bottom: 50px;
 }
 
 .about h2 {
@@ -247,12 +556,13 @@
 
 .about h3 {
     font-size: 20px;
-    padding-bottom: 80px;
+    padding-bottom: 34px;
 }
 
 .silhouette {
     width: 90px;
-    padding-right: 82px;
+    padding-left: 20px;
+    padding-right: 80px;
 }
 
 .about p {
@@ -268,8 +578,8 @@
     font-size: 14px;
 }
 
-.about .btn {
-    margin: 0 0 0 auto;
+.about_contents .btn {
+    margin-right: 20px;
 }
 
 /* contact */
@@ -277,7 +587,7 @@
     position: relative;
     margin: 0 auto;
     overflow: hidden;
-    padding-bottom: 127px;
+    padding-bottom: 120px;
 }
 
 .contact_bg {
@@ -290,18 +600,19 @@
     transform: translateX(-50%);
     border-radius: 99rem;
     overflow: hidden;
-    z-index: 11;
 }
 
 .contact_wrap {
-    z-index: 12;
+    position: relative;
+}
+
+.contact_title {
     text-align: center;
 }
 
 .contact h2 {
     width: 221px;
     padding-top: 180px;
-    padding-bottom: 24px;
     margin: 0 auto;
 }
 
@@ -312,10 +623,15 @@
 
 .contact p {
     margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    text-align: left;
 }
 
 .contact_desc {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 }
 
 button {
@@ -329,7 +645,11 @@ input {
     border-radius: 12px;
     color: #fff;
     border: none;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
+}
+
+input#comment {
+    height: 200px;
 }
 
 #send {
@@ -337,7 +657,6 @@ input {
     box-sizing: border-box;
     text-align: center;
     background: #edc9b9;
-    padding: 24px 58px;
     border-radius: 32px;
     transition: 0.5s;
     letter-spacing: 0.025em;
@@ -345,4 +664,30 @@ input {
 
 #send {
     color: #42210b;
+}
+
+
+.to_top_button {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 99;
+}
+
+.to_top_button span {
+    align-items: center;
+    background: rgba(242, 232, 219, 1);
+    width: 10px;
+    height: 10px;
+    margin: 8px 0px 0px 0px;
+    border-radius: 50%
+}
+
+.to_top_text {
+    writing-mode: vertical-rl;
+    color: #42210b;
+    margin-top: 20px;
 }
