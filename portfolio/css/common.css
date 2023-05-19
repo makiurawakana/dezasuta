@@ -76,6 +76,10 @@ button {
     width: 745px;
 }
 
+.header_left_sp {
+    display: none;
+}
+
 .pc_header_right {
     width: 816px;
     position: absolute;
@@ -120,17 +124,100 @@ button {
 }
 
 .pc_nav ul li:first-of-type {
-    padding-left: none;
+    padding-left: 0px;
+}
+
+.sp_btn,
+.sp_nav {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+    .pc_nav,
+    .header_left {
+        display: none;
+    }
+
+    .pc_header_right img {
+        display: none;
+    }
+
+    .header_left_sp {
+        display: block;
+        width: 200px;
+        z-index: 1;
+    }
+
+    .header_title {
+        position: absolute;
+        top: 60px;
+        left: 40px;
+        text-align: center;
+
+    }
+
+    .header_large_works {
+        width: 100px;
+    }
+
+    .header_title h2 {
+        font-size: 14px;
+        font-weight: normal;
+        margin-top: -10px;
+    }
+
+
+    .sp_btn {
+        display: block;
+    }
+
+    /* ハンバーガー */
+    .sp_btn {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        height: 16px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .sp_btn span {
+        display: block;
+        position: relative;
+        top: 10px;
+        width: 20px;
+        height: 1px;
+        border-radius: 2px;
+        background: #603813;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 1px;
+        border-radius: 2px;
+        background: #603813;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before {
+        bottom: 8px;
+    }
+
+    .sp_btn span::after {
+        top: 8px;
+    }
 }
 
 /* フッター */
 #footer {
-    height: 200px;
     background-color: rgba(237, 201, 185, 1.0);
-}
-
-.footer_wrap {
-    margin: 0 auto;
 }
 
 .footer_nav ul {
@@ -147,6 +234,28 @@ button {
 .copyright {
     font-size: 12px;
     text-align: center;
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width: 767px) {
+    .footer_nav ul {
+        display: block;
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 0px;
+    }
+
+    .footer_nav ul li {
+        padding-left: 0px;
+        padding-bottom: 12px;
+    }
+
+    .copyright {
+        text-align: center;
+        padding-top: 18px;
+        padding-bottom: 34px;
+    }
+
 }
 
 /* 制作実績ページ */

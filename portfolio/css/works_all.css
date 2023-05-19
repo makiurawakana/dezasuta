@@ -1,6 +1,9 @@
 .works_index {
     max-width: 1000px;
-    margin: 180px auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 180px;
+    box-sizing: border-box;
 }
 
 .works_index ul {
@@ -10,10 +13,29 @@
 }
 
 .works_index ul li {
-    width: 300px;
+    width: 30%;
+    max-width: 300px;
 }
 
 h3 {
     font-weight: normal;
     padding: 16px 12px 133px 12px;
+}
+
+@media screen and (max-width: 767px) {
+    .works_index {
+        margin-top: 90px;
+    }
+
+    .works_index ul {
+        display: block;
+    }
+
+    .works_index ul li {
+        width: 100%;
+    }
+
+    h3 {
+        padding: 16px 12px 60px 12px;
+    }
 }
