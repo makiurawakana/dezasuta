@@ -2,7 +2,7 @@
     max-width: 1000px;
     padding-left: 10%;
     padding-right: 10%;
-    margin-top: 180px;
+    margin: 180px auto 0 auto;
     box-sizing: border-box;
 }
 
@@ -25,6 +25,7 @@ h3 {
 @media screen and (max-width: 767px) {
     .works_index {
         margin-top: 90px;
+        margin-bottom: 100px;
     }
 
     .works_index ul {
@@ -33,6 +34,7 @@ h3 {
 
     .works_index ul li {
         width: 100%;
+        max-width: fit-content;
     }
 
     h3 {
