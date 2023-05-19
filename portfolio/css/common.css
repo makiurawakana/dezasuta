@@ -274,6 +274,32 @@ button {
     }
 }
 
+/* トップにもどる */
+.to_top_button {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 99;
+}
+
+.to_top_button span {
+    align-items: center;
+    background: rgba(242, 232, 219, 1);
+    width: 10px;
+    height: 10px;
+    margin: 8px 0px 0px 0px;
+    border-radius: 50%
+}
+
+.to_top_text {
+    writing-mode: vertical-rl;
+    color: #42210b;
+    margin-top: 20px;
+}
+
 /* フッター */
 #footer {
     background-color: rgba(237, 201, 185, 1.0);

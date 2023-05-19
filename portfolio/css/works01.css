@@ -1,21 +1,8 @@
-#body {
-    margin: 0 auto;
+.main {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.works01 {
-    max-width: 1000px;
-    box-sizing: border-box;
-    background: rgba(242, 232, 219, 0.4);
-    border-radius: 20px;
-    padding: 5%;
-    margin: 100px auto;
-}
-
-h2 {
-    font-size: 28px;
-    font-weight: normal;
-    padding-bottom: 38px;
-}
 
 .header_title_large {
     width: 172px;
@@ -25,9 +12,55 @@ h2 {
     font-size: 20px;
 }
 
+/* 背景あるところ */
+.works01 {
+    max-width: 1000px;
+    box-sizing: border-box;
+    background: rgba(242, 232, 219, 0.4);
+    border-radius: 20px;
+    padding: 36px 5%;
+    margin: 100px auto;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: normal;
+    padding-bottom: 38px;
+}
+
 .works01_detail {
     display: flex;
     justify-content: space-evenly;
+}
+
+.single_image {
+    width: 50%;
+    padding-right: 10%;
+}
+
+@media screen and (max-width: 767px) {
+    .works01 {
+        margin: 60px auto 34px auto;
+    }
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+        font-weight: normal;
+        padding-bottom: 40px;
+    }
+
+    .works01_detail {
+        display: block;
+    }
+
+    .single_image {
+        width: 100%;
+        max-width: 500px;
+        padding-right: 0;
+        padding-bottom: 40px;
+        margin: 0 auto;
+    }
 }
 
 .details_table {
@@ -50,10 +83,31 @@ dd {
     width: 60%;
 }
 
-.single_image {
-    width: 50%;
-    padding-right: 10%;
+@media screen and (max-width: 767px) {
+
+    /* 詳細 */
+    .details_table {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .detail {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dotted;
+        padding: 16px 10px;
+    }
+
+    dt {
+        width: 40%;
+        padding-right: 20px;
+    }
+
+    dd {
+        width: 60%;
+    }
 }
+
 
 .detail02 {
     max-width: 1000px;
@@ -88,6 +142,19 @@ dd {
     width: 80%;
 }
 
+@media screen and (max-width: 767px) {
+    .desc {
+        padding: 28px 20px 20px 20px;
+        line-height: 2.25;
+    }
+
+    .capture {
+        margin: 100px auto 60px auto;
+    }
+
+}
+
+/* ページ選択ボタン */
 .page_selection {
     display: flex;
     justify-content: space-evenly;
@@ -117,4 +184,17 @@ dd {
     transition: 0.5s;
     letter-spacing: 0.025em;
     border: none;
+}
+
+@media screen and (max-width: 767px) {
+    .to_works_all {
+        width: 180px;
+        padding: 16px 0px;
+    }
+
+    .before_btn,
+    .after_btn {
+        width: 48px;
+        height: 48px;
+    }
 }
