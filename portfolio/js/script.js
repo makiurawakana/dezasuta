@@ -16,3 +16,36 @@ $(function () {
       $('.sp_btn').toggleClass('open');
   });
 });
+
+// スライダー
+$('.sp_slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: "20%",
+  autoplay: true,
+});
+
+
+// topへのボタン追従
+$(function() {
+  var btn = $('.to_top_arrow');
+  
+  //スクロールしてページトップから800pxに達したらボタンを表示
+  $(window).on('load scroll', function(){
+    if($(this).scrollTop() > 800) {
+      btn.addClass('active');
+    }else{
+      btn.removeClass('active');
+    }
+  });
+});
+
+// // google form
+//     let submitted = false;
+// <iframe
+//     name="hidden_iframe"
+//     id="hidden_iframe"
+//     style="display: none"
+//     onload="if(submitted){window.location='thankyoupage.index.html';}"
+// ></iframe>

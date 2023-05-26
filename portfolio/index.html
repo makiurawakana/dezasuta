@@ -7,8 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOP | portfolio makiura wakana</title>
     <meta name="description" content="ポートフォリオサイトです。">
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <!-- 基本のcss -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!--slick プラグイン  -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -21,6 +30,16 @@
                     <li><a href="#works">works</a></li>
                     <li><a href="#about">about</a></li>
                     <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="index.html#concept">concept</a></li>
+                    <li><a href="index.html#skills">skills</a></li>
+                    <li><a href="index.html#works">works</a></li>
+                    <li><a href="index.html#about">about</a></li>
+                    <li><a href="index.html#contact">contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,6 +55,7 @@
         </div>
     </div>
     <div class="mv_bottom"><img src="images/mv_bottom_pc@2x.png" alt="mv波"></div>
+    <div class="mv_bottom_sp"><img src="images/sp_mv_bottom.svg" alt="mv波"></div>
     <!-- scroll -->
     <div class="scroll_wrap">
         <div class="scroll_dots">
@@ -54,13 +74,13 @@
             <div class="circle02"></div>
         </div>
         <div class="concept_lead_wrap">
-            <p class="concept_lead"> このたびはサイトご訪問ありがとうございます。<br><br>
+            <p class="concept_lead"> このたびはサイトご訪問<br class="sp_br">ありがとうございます。<br><br>
                 自分の名前の”和”を日頃から大切にしており、<br>
                 制作においても関わる方々との調和を意識しながら<br>
-                寄り添うようなデザインを目指していきます。<br><br>
+                寄り添うような<br class="sp_br">デザインを目指していきます。<br><br>
                 さらにデザインを通して私からお客様へ、<br>
                 お客様から届けたいさらにその先へ、<br>
-                輪をつないでいけるよう心を込めて制作してまいります。</p>
+                輪をつないでいけるよう<br class="sp_br">心を込めて制作してまいります。</p>
         </div>
     </section>
 
@@ -85,7 +105,7 @@
                 <div class="skills_cording">
                     <div class="skills_icon"><img src="images/cording_icon@2x.png" alt="コーディングアイコン"></div>
                     <h3>コーディング</h3>
-                    <p>HTML、CSSを使用し、レスポンシブにも対応したコーディングができます。<br>
+                    <p>HTML、CSSを使用し、レスポンシブにも対応したコーディングができます。
                         jQueryでハンバーガーメニューなど、簡単な動きをつける事も可能です。</p>
                     <ul>
                         <li><img src="images/html_icon@2x.png" alt="htmlアイコン"></li>
@@ -95,11 +115,19 @@
                 </div>
             </div>
         </div>
-        <div class="skills_wave"><img src="images/skills_wave_bottom_pc@2x.png" alt="skills波（下）"></div>
+        <div class="skills_wave"><img src="images/skills_bottom_wave@2x.png" alt="skills波（下）"></div>
     </section>
 
     <section id="works" class="works">
-
+        <!-- works タイトル部分 -->
+        <div class="works_title">
+            <h2><img src="images/title/top_works@2x.png" alt="works"></h2>
+            <h3>制作実績</h3>
+            <a href="works.html">
+                <div class="btn">もっとみる</div>
+            </a>
+        </div>
+        <!-- PC版works -->
         <div class="works_animation_wrap">
             <div class="works_circle_large">
                 <div class="works_circle_middle"></div>
@@ -129,18 +157,23 @@
                     </div>
                 </div>
             </div>
-
-            <div class="works_title">
-                <h2><img src="images/title/top_works@2x.png" alt="works"></h2>
-                <h3>制作実績</h3>
-                <a href="works_all.index.html">
-                    <div class="btn">もっとみる</div>
-                </a>
-            </div>
         </div>
+        <!-- worksスライダー -->
+        <div class="sp_slider">
+            <div class="parts"><img src="images/top_works/top_works_beautysalon@2x.png" alt="LIFE hair design様">
+            </div>
+            <div class="parts"><img src="images/top_works/top_works_workers@2x.png" alt="workers様"></div>
+            <div class="parts"><img src="images/top_works/top_works_cafe@2x.png" alt="DESIGN CAFE様"></div>
+            <div class="parts"><img src="images/top_works/top_works_mobile@2x.png" alt="デザスタモバイル様"></div>
+            <div class="parts"><img src="images/top_works/top_works_trip@2x.png" alt="TRRRRIP様"></div>
+            <div class="parts"><img src="images/top_works/top_works_burger@2x.png" alt="デザインバーガー様"></div>
+        </div>
+        <a href="works.html">
+            <div class="sp_more_btn">もっとみる</div>
+        </a>
     </section>
 
-
+    <!-- about -->
     <section id="about" class="about">
         <div class="about_bg">
             <div class="about_contents">
@@ -150,6 +183,7 @@
                 </div>
                 <div class="about_details">
                     <div class="silhouette"><img src="images/silhouette@2x.png" alt="シルエット画像"></div>
+                    <div class="silhouette_sp"><img src="images/about_silhouette@2x.png" alt="SPシルエット画像"></div>
                     <p><span class="about_name">牧浦和奏　</span><span class="yomi">まきうら　わかな</span><br><br>
                         兵庫県出身　26歳<br>
                         思いに寄り添ったデザインをこころがけます。</p>
@@ -162,6 +196,8 @@
     </section>
 
     <section id="contact" class="contact">
+        <div><img src="images/contact_background.svg" alt="contact背景">
+        </div>
         <div class="contact_bg"></div>
         <div class="contact_wrap">
             <div class="contact_title">
@@ -170,32 +206,27 @@
                 <p class="contact_desc">気になることがあればお気軽にお問い合わせください。</p>
             </div>
             <div class="form_wrap">
-                <form action="send">
-                    <p><label for="name">お名前</label></p>
-                    <p><input id="name" type="text" name="name"></p>
-                    <p><label for="mail">メールアドレス</label></p>
-                    <p><input id="mail" type="text" name="your_email"></p>
-                    <p><label for="comment">お問い合わせ内容</label></p>
-                    <p><input id="comment" type="text" name="comment"></p>
-                    <p><input id="send" type="submit" value="この内容で送信する"></p>
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScbXoRNepjxSR4doIy3zYcmPNCXF-nioAekz2SzhDrNUAlFSQ/formResponse"
+                    method="post" target="hidden_iframe" onsubmit="submitted=true;" class="g-form">
+                    <p class="form_label"><label for="name">お名前</label></p>
+                    <p class="form_box"><input id="name" type="text" size="20" name="entry.2052874949"></p>
+                    <p class="form_label"><label for="mail">メールアドレス</label></p>
+                    <p class="form_box"><input id="mail" type="text" size="30" name="entry.739654730"></p>
+                    <p class="form_label"><label for="comment">お問い合わせ内容</label></p>
+                    <p class="form_box"><input id="comment" type="text" size="200" name="entry.794768893"></p>
+                    <p class="send_btn"><input id="send" type="submit" value="この内容で送信する"></p>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- トップにもどるボタン -->
-    <a href="#concept">
-        <div class="to_top_button">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <p class="to_top_text">トップにもどる</p>
-        </div>
-    </a>
+    <!-- ページトップへ -->
+    <div class="to_top_arrow">
+        <a href="#">page top</a>
+    </div>
 
+    <!-- フッター -->
     <footer id="footer">
         <nav class="footer_nav">
             <ul>
@@ -207,10 +238,17 @@
             </ul>
         </nav>
         <p class="copyright">©2023　wakana design</p>
-
     </footer>
 
+    <!-- js -->
     <script src="js/script.js"></script>
+    <!-- google formのjs -->
+    <script type="text/javascript">
+        var submitted = false;
+    </script>
+    <!-- google form テンプレ削除とthanks移動 -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+        onload="if(submitted){window.location='thankyoupage.index.html';}"></iframe>
 </body>
 
 </html>

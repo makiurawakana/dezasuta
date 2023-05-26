@@ -37,6 +37,7 @@ a {
     /*色を消す*/
     color: inherit;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 a:hover {
@@ -61,6 +62,42 @@ button {
     outline: none;
     padding: 0;
     appearance: none;
+}
+
+/* formリセット */
+input,
+button,
+select,
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    font: inherit;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    display: none;
+}
+
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 /* ここから */
@@ -111,7 +148,7 @@ button {
 
 .pc_nav ul {
     position: absolute;
-    top: 50%;
+    top: 72px;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -134,27 +171,35 @@ button {
 
 @media screen and (max-width: 767px) {
 
-    .pc_nav,
-    .header_left {
+    .pc_nav {
         display: none;
     }
 
     .pc_header_right img {
+        width: 100%;
         display: none;
     }
 
-    .header_left_sp {
-        display: block;
-        width: 200px;
-        z-index: 1;
+    .pc_header_right {
+        width: 100%;
     }
 
     .header_title {
         position: absolute;
         top: 60px;
-        left: 40px;
+        left: 10%;
         text-align: center;
 
+    }
+
+    .header_left {
+        display: none;
+    }
+
+    .header_left_sp {
+        display: block;
+        width: 56%;
+        position: relative;
     }
 
     .header_large_works {
@@ -178,7 +223,7 @@ button {
         position: absolute;
         top: 30px;
         right: 40px;
-        height: 16px;
+        height: 20px;
         cursor: pointer;
         z-index: 2;
     }
@@ -274,31 +319,45 @@ button {
     }
 }
 
-/* トップにもどる */
-.to_top_button {
+/* ページトップへ */
+.to_top_arrow {
     position: fixed;
-    right: 40px;
-    bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 99;
-}
-
-.to_top_button span {
-    align-items: center;
-    background: rgba(242, 232, 219, 1);
-    width: 10px;
-    height: 10px;
-    margin: 8px 0px 0px 0px;
-    border-radius: 50%
-}
-
-.to_top_text {
+    bottom: 140px;
+    right: 5%;
     writing-mode: vertical-rl;
-    color: #42210b;
-    margin-top: 20px;
+    transform: rotate(180deg);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
 }
+
+/* js表記 このクラスが付与されると表示する*/
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.to_top_arrow::before {
+    content: "";
+    position: absolute;
+    top: 142px;
+    right: 1px;
+    width: 1px;
+    height: 15px;
+    background: #603813;
+    transform: skewX(-45deg);
+}
+
+.to_top_arrow::after {
+    content: "";
+    position: absolute;
+    top: 85px;
+    right: 9px;
+    width: 1px;
+    height: 72px;
+    background: #603813;
+}
+
 
 /* フッター */
 #footer {

@@ -33,6 +33,36 @@
     z-index: -1;
 }
 
+@media screen and (max-width: 767px) {
+    .about_wrap {
+        display: block;
+        height: 730px;
+        margin-top: 50px;
+    }
+
+    .silhouette {
+        width: 100%;
+        max-width: 150px;
+        margin: 0 auto;
+    }
+
+    .name_bold {
+        font-size: 23px;
+    }
+
+    .about_desc p {
+        line-height: 2.11;
+        width: 78%;
+        margin-left: 0px;
+        margin: 30px auto 0 auto;
+    }
+
+    .circle04 {
+        display: none;
+    }
+}
+
+
 /* わたしのつよみ */
 .strength {
     font-size: 42px;
@@ -49,7 +79,7 @@
     position: absolute;
     top: 0;
     left: -200px;
-    z-index: 1;
+    z-index: -1;
 }
 
 .index_figure {
@@ -69,25 +99,20 @@ h3 {
 }
 
 .strength_contents p {
-    z-index: 2;
     line-height: 2.5;
     max-width: 480px;
-    margin-left: 40px;
+    padding-left: 40px;
+    padding-top: 120px;
 }
 
 .strength_wrap01 {
     position: relative;
-    height: 650px;
 }
 
 .strength_contents {
     display: flex;
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    margin: auto 13%;
+    margin: 0 13%;
+    padding-top: 50px;
     align-items: center;
 }
 
@@ -100,9 +125,8 @@ h3 {
 /* 02 */
 .strength_wrap02 {
     position: relative;
-    height: 650px;
-    max-width: 100vw;
     overflow: hidden;
+    padding-bottom: 120px;
 }
 
 .circle02 {
@@ -113,18 +137,14 @@ h3 {
     position: absolute;
     top: 0;
     right: -200px;
-    z-index: 1;
+    z-index: -1;
 }
 
 .strength_contents02 {
     display: flex;
     flex-direction: row-reverse;
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
     margin: auto 13%;
+    padding-top: 50px;
     align-items: center;
 }
 
@@ -132,6 +152,7 @@ h3 {
     line-height: 2.5;
     max-width: 480px;
     margin-right: 40px;
+    padding-top: 120px;
 }
 
 .index_figure02 {
@@ -144,23 +165,115 @@ h3 {
 /* 03 */
 .strength_wrap03 {
     position: relative;
-    height: 650px;
     margin-bottom: 90px;
 }
 
 .strength_contents03 {
     display: flex;
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
     margin: auto 13%;
+    padding-top: 50px;
     align-items: center;
+    padding-bottom: 100px;
 }
 
 .strength_contents03 p {
     line-height: 2.5;
     max-width: 480px;
-    margin-left: 40px;
+    padding-left: 40px;
+    padding-top: 120px;
+}
+
+@media screen and (max-width: 767px) {
+    .strength {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 125px;
+        margin-bottom: 50px;
+    }
+
+    /* sp01 */
+
+    .strength_wrap01 {
+        position: relative;
+        margin-bottom: 80px;
+    }
+
+    .circle {
+        width: 340px;
+        height: 340px;
+        top: 0;
+        left: -170px;
+    }
+
+    .index_figure {
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+        letter-spacing: 0.12em;
+        line-height: 1.55;
+    }
+
+
+    .strength_contents p {
+        z-index: 2;
+        line-height: 2.5;
+        max-width: 500px;
+        padding: 200px 0px 0px 16px;
+    }
+
+    .strength_contents {
+        margin: auto 20px;
+        align-items: normal;
+        top: 35%;
+    }
+
+    /* 02 */
+    .strength_wrap02 {
+        position: relative;
+        padding-bottom: 80px;
+    }
+
+    .circle02 {
+        width: 340px;
+        height: 340px;
+        position: absolute;
+        top: 0;
+        right: -170px;
+        z-index: -1;
+    }
+
+
+    .strength_contents02 p {
+        z-index: 2;
+        line-height: 2.5;
+        max-width: 500px;
+        padding: 200px 0px 0px 16px;
+        margin-right: 0;
+    }
+
+
+    .strength_contents02 {
+        margin: auto 20px;
+        align-items: normal;
+    }
+
+    /* 03 */
+    .strength_wrap03 {
+        position: relative;
+        margin-bottom: 80px;
+    }
+
+    .strength_contents03 {
+        margin: auto 20px;
+        align-items: normal;
+        top: 35%;
+    }
+
+    .strength_contents03 p {
+        max-width: 500px;
+        padding: 200px 0px 0px 16px;
+    }
 }
