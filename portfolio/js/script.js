@@ -17,15 +17,6 @@ $(function () {
   });
 });
 
-// スライダー
-$('.sp_slider').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  centerMode: true,
-  centerPadding: "20%",
-  autoplay: true,
-});
-
 
 // topへのボタン追従
 $(function() {
